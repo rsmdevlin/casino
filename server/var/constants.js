@@ -13,12 +13,12 @@ module.exports = Object.freeze({
 
     DATABASE: [
         {
-            host: 'db4free.net', 
-            user: 'oana_popescu_93', 
-            password: 'Qazwsxedc123rfv123!',
-            database: 'bunnybetdatabase',
+            host: process.env.MYSQLHOST, 
+            user: process.env.MYSQLUSER, 
+            password: process.env.MYSQLPASSWORD,
+            database: process.env.MYSQLDATABASE,
+            port: process.env.MYSQLPORT,
             sql: "SELECT * FROM casino_users",
-            // multipleStatements: true 
         },
     ],
 })
